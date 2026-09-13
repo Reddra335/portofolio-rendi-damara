@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Rendi Damara</title>
+    <meta
+      name="description"
+      content="Hubungi Rendi Damara - Email, social media, dan form kontak"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+
+    <!-- Import Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <a href="/" class="navbar-logo">RENDI<br />DAMARA</a>
+      <div class="navbar-menu">
+        <a href="./index.html">HOME</a>
+        <a href="./about.html">ABOUT</a>
+        <a href="./skills.html">SKILLS</a>
+        <a href="./projects.html">PROJECTS</a>
+        <a href="./contact.html" class="active">CONTACT</a>
+
+        <a href="/assets/cv/Rendi-Damara-CV.pdf" download class="navbar-cv">
+          <span class="cv-icon">↓</span>
+          <span>Download CV</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- CONTACT CONTENT (border full) -->
+    <div class="contact-page">
+      <div class="brutalist-container">
+        <!-- Header -->
+        <div class="header">
+          <div class="label">// CONTACT</div>
+          <div class="status">// LET'S TALK</div>
+        </div>
+
+        <!-- Hero Title -->
+        <div class="hero-title">
+          <h1>
+            Let's Work<br />
+            <span class="outline">Together</span><br />
+            <span class="highlight">.</span>
+          </h1>
+        </div>
+
+        <!-- Info Grid -->
+        <div class="info-grid">
+          <!-- Kolom Kiri: Email & Location -->
+          <div class="info-col">
+            <div class="info-block">
+              <span class="info-label">// Email</span>
+              <div class="email-row">
+                <span class="info-value" id="emailText">hello@rendi.com</span>
+                <button class="copy-btn" id="copyBtn" type="button">
+                  Copy
+                </button>
+              </div>
+            </div>
+
+            <div class="info-block">
+              <span class="info-label">// Location</span>
+              <span class="info-value">Bandung, ID</span>
+            </div>
+          </div>
+
+          <!-- Kolom Kanan: Social & Response Time -->
+          <div class="info-col">
+            <div class="info-block">
+              <span class="info-label">// Social Media</span>
+              <div class="social-list">
+                <a
+                  href="https://github.com/username"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="social-link"
+                  >GitHub</a
+                >
+                <a
+                  href="https://linkedin.com/in/username"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="social-link"
+                  >LinkedIn</a
+                >
+                <a
+                  href="https://instagram.com/username"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="social-link"
+                  >Instagram</a
+                >
+              </div>
+            </div>
+
+            <div class="info-block">
+              <span class="info-label">// Response Time</span>
+              <span class="info-value">Within 24 Hours</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Section -->
+        <div class="form-section">
+          <div class="form-title">// Send A Message</div>
+
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nama <span>*</span></label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Nama kamu"
+                  required
+                  minlength="3"
+                  maxlength="100"
+                />
+              </div>
+              <div class="form-group">
+                <label>Email <span>*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="email@example.com"
+                  required
+                  maxlength="100"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Subjek <span class="optional">(opsional)</span></label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Subjek pesan..."
+                maxlength="200"
+              />
+            </div>
+
+            <div class="form-group">
+              <label>Pesan <span>*</span></label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tulis pesanmu di sini..."
+                required
+                minlength="10"
+                maxlength="2000"
+              ></textarea>
+            </div>
+
+            <!-- Honeypot (anti-bot) -->
+            <div class="honeypot" aria-hidden="true">
+              <label>Website</label>
+              <input
+                type="text"
+                id="website"
+                name="website"
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="form-status" id="formStatus"></div>
+
+            <!-- Submit Button -->
+            <div class="submit-wrapper">
+              <button type="submit" class="submit-btn" id="submitBtn">
+                <span class="btn-text" id="btnText">Kirim Pesan</span>
+                <span class="btn-arrow">→</span>
+                <span class="btn-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </button>
+              <span class="submit-hint"
+                >// Tekan untuk mengirim <span>↗</span></span
+              >
+            </div>
+          </form>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+          <p>"Dream big, execute precisely."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================
+         JAVASCRIPT
+         ========================================= -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // =========================================
+        // 1. Efek Glitch pada tanda titik "."
+        // =========================================
+        const highlightText = document.querySelector(".highlight");
+
+        setInterval(() => {
+          if (Math.random() > 0.85) {
+            highlightText.style.backgroundColor = "transparent";
+            highlightText.style.color = "var(--text)";
+            highlightText.style.webkitTextStroke = "2px var(--text)";
+
+            setTimeout(() => {
+              highlightText.style.backgroundColor = "var(--text)";
+              highlightText.style.color = "var(--bg)";
+              highlightText.style.webkitTextStroke = "none";
+            }, 150);
+          }
+        }, 800);
+
+        // =========================================
+        // 2. Copy Email to Clipboard
+        // =========================================
+        const copyBtn = document.getElementById("copyBtn");
+        const emailText = document.getElementById("emailText");
+
+        copyBtn.addEventListener("click", async () => {
+          const email = emailText.textContent.trim();
+
+          try {
+            await navigator.clipboard.writeText(email);
+            copyBtn.textContent = "Copied!";
+            copyBtn.classList.add("copied");
+
+            setTimeout(() => {
+              copyBtn.textContent = "Copy";
+              copyBtn.classList.remove("copied");
+            }, 2000);
+          } catch (err) {
+            const textArea = document.createElement("textarea");
+            textArea.value = email;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textArea);
+
+            copyBtn.textContent = "Copied!";
+            copyBtn.classList.add("copied");
+            setTimeout(() => {
+              copyBtn.textContent = "Copy";
+              copyBtn.classList.remove("copied");
+            }, 2000);
+          }
+        });
+
+        // =========================================
+        // 3. Form Submission
+        // =========================================
+        const form = document.getElementById("contactForm");
+        const submitBtn = document.getElementById("submitBtn");
+        const btnText = document.getElementById("btnText");
+        const formStatus = document.getElementById("formStatus");
+
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const payload = {
+            name: document.getElementById("name").value.trim(),
+            email: document.getElementById("email").value.trim(),
+            subject: document.getElementById("subject").value.trim(),
+            message: document.getElementById("message").value.trim(),
+            website: document.getElementById("website").value.trim(),
+          };
+
+          // Honeypot check
+          if (payload.website !== "") {
+            console.warn("Bot detected");
+            return;
+          }
+
+          if (!payload.name || !payload.email || !payload.message) {
+            formStatus.textContent =
+              "// ERROR: Nama, email, dan pesan wajib diisi.";
+            formStatus.classList.add("show", "error");
+            return;
+          }
+
+          submitBtn.disabled = true;
+          submitBtn.classList.add("loading");
+          btnText.textContent = "Mengirim";
+          formStatus.classList.remove("show", "error");
+
+          console.log("📤 Payload:", payload);
+
+          try {
+            // Simulasi delay 1.5 detik
+            await new Promise((resolve) => setTimeout(resolve, 1500));
+
+            formStatus.textContent =
+              "// SUCCESS: Pesan berhasil dikirim! Saya akan balas dalam 24 jam.";
+            formStatus.classList.add("show");
+            formStatus.classList.remove("error");
+
+            form.reset();
+          } catch (error) {
+            console.error("❌ Error:", error);
+            formStatus.textContent =
+              "// ERROR: Gagal mengirim pesan. Coba lagi nanti.";
+            formStatus.classList.add("show", "error");
+          } finally {
+            submitBtn.disabled = false;
+            submitBtn.classList.remove("loading");
+            btnText.textContent = "Kirim Pesan";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - Rendi Damara</title>
+    <meta
+      name="description"
+      content="Gallery karya dan proyek Rendi Damara - Web, IoT, Embedded System"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+
+    <!-- Import Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Grotesk:wght@500;700&family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/projects.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <a href="/" class="navbar-logo">RENDI<br />DAMARA</a>
+      <div class="navbar-menu">
+        <a href="./index.html">HOME</a>
+        <a href="./about.html">ABOUT</a>
+        <a href="./skills.html">SKILLS</a>
+        <a href="./projects.html" class="active">PROJECTS</a>
+        <a href="./contact.html">CONTACT</a>
+
+        <a href="/assets/cv/Rendi-Damara-CV.pdf" download class="navbar-cv">
+          <span class="cv-icon">↓</span>
+          <span>Download CV</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- PROJECTS CONTENT -->
+    <div class="projects-container">
+      <div class="projects-wrapper">
+        <!-- Header -->
+        <div class="section-header">
+          <div class="label">// PROJECTS</div>
+          <div class="status">// SELECTED WORKS</div>
+        </div>
+
+        <!-- Hero Title -->
+        <div class="hero-title">
+          <h1>
+            Selected<br />
+            <span class="outline">Works</span><br />
+            <span class="highlight">& Archive.</span>
+          </h1>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+          <span class="filter-label">Filter:</span>
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="iot">IoT</button>
+          <button class="filter-btn" data-filter="embedded">Embedded</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          <!-- 01. Smart Attendance System (Featured) -->
+          <div class="project-card featured" data-category="web iot">
+            <div class="project-meta">
+              <span class="number">[ 01 ]</span>
+              <span class="category">Web · IoT</span>
+            </div>
+            <div class="project-content">
+              <h2>Smart Attendance System</h2>
+              <p>
+                Sistem absensi berbasis RFID yang terintegrasi dengan dashboard
+                web untuk monitoring kehadiran secara real-time. Berperan
+                sebagai Hardware Integrator dan Backend Developer.
+              </p>
+              <div class="tech-stack">
+                <span>Golang</span>
+                <span>React</span>
+                <span>MySQL</span>
+                <span>Raspberry Pi</span>
+                <span>MQTT</span>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noreferrer">Live Demo ↗</a>
+                <a href="#" target="_blank" rel="noreferrer">GitHub ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 02. E-Commerce Dashboard -->
+          <div class="project-card" data-category="web">
+            <div class="project-meta">
+              <span class="number">[ 02 ]</span>
+              <span class="category">Web</span>
+            </div>
+            <div class="project-content">
+              <h2>E-Commerce Dashboard</h2>
+              <p>
+                Dashboard admin untuk manajemen produk, pesanan, dan laporan
+                penjualan dengan antarmuka yang bersih dan responsif.
+              </p>
+              <div class="tech-stack">
+                <span>React</span>
+                <span>JavaScript</span>
+                <span>MySQL</span>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noreferrer">Live Demo ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 03. Automated Lighting Control -->
+          <div class="project-card" data-category="embedded">
+            <div class="project-meta">
+              <span class="number">[ 03 ]</span>
+              <span class="category">Embedded</span>
+            </div>
+            <div class="project-content">
+              <h2>Automated Lighting Control</h2>
+              <p>
+                Sistem kendali lampu otomatis berbasis sensor gerak dan
+                intensitas cahaya menggunakan mikrokontroler.
+              </p>
+              <div class="tech-stack">
+                <span>C++</span>
+                <span>Arduino</span>
+                <span>Sensor PIR</span>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noreferrer">GitHub ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 04. Weather Monitoring Station -->
+          <div class="project-card" data-category="iot">
+            <div class="project-meta">
+              <span class="number">[ 04 ]</span>
+              <span class="category">IoT</span>
+            </div>
+            <div class="project-content">
+              <h2>Weather Monitoring Station</h2>
+              <p>
+                Stasiun pemantau cuaca mini yang mengirim data suhu, kelembapan,
+                dan tekanan udara ke cloud secara berkala.
+              </p>
+              <div class="tech-stack">
+                <span>ESP32</span>
+                <span>MQTT</span>
+                <span>Golang</span>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noreferrer">Live Demo ↗</a>
+                <a href="#" target="_blank" rel="noreferrer">GitHub ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 05. Personal Portfolio Website -->
+          <div class="project-card" data-category="web">
+            <div class="project-meta">
+              <span class="number">[ 05 ]</span>
+              <span class="category">Web</span>
+            </div>
+            <div class="project-content">
+              <h2>Personal Portfolio Website</h2>
+              <p>
+                Website portofolio pribadi dengan gaya brutalist modern,
+                dibangun dari nol tanpa framework CSS.
+              </p>
+              <div class="tech-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noreferrer">Live Demo ↗</a>
+                <a href="#" target="_blank" rel="noreferrer">GitHub ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 06. Smart Door Lock -->
+          <div class="project-card" data-category="embedded iot">
+            <div class="project-meta">
+              <span class="number">[ 06 ]</span>
+              <span class="category">Embedded · IoT</span>
+            </div>
+            <div class="project-content">
+              <h2>Smart Door Lock</h2>
+              <p>
+                Kunci pintu pintar berbasis RFID dan keypad yang terhubung ke
+                aplikasi mobile untuk kontrol akses jarak jauh.
+              </p>
+              <div class="tech-stack">
+                <span>Arduino</span>
+                <span>RFID</span>
+                <span>Node.js</span>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noreferrer">GitHub ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+          <p>"Trust the process, finish the project."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================
+         JAVASCRIPT
+         ========================================= -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Efek Glitch pada teks highlight "& Archive."
+        const highlightText = document.querySelector(".highlight");
+
+        setInterval(() => {
+          if (Math.random() > 0.85) {
+            highlightText.style.backgroundColor = "transparent";
+            highlightText.style.color = "var(--text)";
+            highlightText.style.webkitTextStroke = "2px var(--text)";
+
+            setTimeout(() => {
+              highlightText.style.backgroundColor = "var(--text)";
+              highlightText.style.color = "var(--bg)";
+              highlightText.style.webkitTextStroke = "none";
+            }, 150);
+          }
+        }, 800);
+
+        // Filter Functionality
+        const filterBtns = document.querySelectorAll(".filter-btn");
+        const projectCards = document.querySelectorAll(".project-card");
+
+        filterBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            filterBtns.forEach((b) => b.classList.remove("active"));
+            btn.classList.add("active");
+
+            const filter = btn.getAttribute("data-filter");
+
+            projectCards.forEach((card) => {
+              const categories = card.getAttribute("data-category");
+
+              if (filter === "all" || categories.includes(filter)) {
+                card.classList.remove("hidden");
+              } else {
+                card.classList.add("hidden");
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

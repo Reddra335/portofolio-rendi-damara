@@ -1,0 +1,582 @@
+/* =========================================
+           RESET & BASE
+           ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0d0d0d;
+  --text: #ffffff;
+  --accent: #7a1c2e;
+  --gray-block: #4a4a4a;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================================
+           KEYFRAMES ANIMATIONS
+           ========================================= */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes revealUp {
+  from {
+    clip-path: inset(100% 0 0 0);
+    opacity: 0;
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+@keyframes glitchPulse {
+  0%,
+  90%,
+  100% {
+    background-color: var(--gray-block);
+  }
+  92% {
+    background-color: var(--accent);
+  }
+  94% {
+    background-color: var(--gray-block);
+  }
+  96% {
+    background-color: #ffffff;
+  }
+  98% {
+    background-color: var(--gray-block);
+  }
+}
+/* =========================================
+           HERO SECTION
+           ========================================= */
+.hero {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  min-height: 620px;
+  overflow: hidden;
+}
+
+/* =========================================
+           FOTO DENGAN BACKGROUND GRADIENT
+           ========================================= */
+.hero-photo {
+  position: absolute;
+  bottom: 0;
+  left: 55%;
+  transform: translateX(-50%);
+  height: 92%;
+  z-index: 10;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  background: linear-gradient(180deg, #ffffff 0%, #858585 100%);
+  padding: 1.2rem 1.2rem 0 1.2rem;
+
+  border: 3px solid #f5e6d3;
+
+  box-shadow:
+    0 0 60px rgba(255, 255, 255, 0.08),
+    -10px 10px 0 0 var(--accent);
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 55%,
+    rgba(0, 0, 0, 0.85) 70%,
+    rgba(0, 0, 0, 0.4) 88%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 55%,
+    rgba(0, 0, 0, 0.85) 70%,
+    rgba(0, 0, 0, 0.4) 88%,
+    transparent 100%
+  );
+
+  opacity: 0;
+  animation: revealUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+}
+
+.hero-photo img {
+  height: 100%;
+  width: auto;
+  max-width: 600px;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  filter: contrast(1.05) brightness(0.95);
+
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+}
+
+/* --- Teks Kiri Atas: Hello, I Am --- */
+.hero-greeting {
+  position: absolute;
+  top: 24%;
+  left: 4rem;
+  z-index: 5;
+  opacity: 0;
+  animation: slideFromLeft 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+}
+
+.hero-greeting h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: clamp(2.5rem, 5vw, 5.5rem);
+  line-height: 0.9;
+  letter-spacing: -2px;
+  color: var(--text);
+}
+
+/* --- Teks Kiri Tengah: Rendi Damara! --- */
+.hero-name {
+  position: absolute;
+  top: 38%;
+  left: 4rem;
+  z-index: 5;
+  opacity: 0;
+  animation: slideFromLeft 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
+}
+
+.hero-name h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: clamp(3.5rem, 7vw, 7.5rem);
+  line-height: 0.85;
+  letter-spacing: -4px;
+  color: var(--text);
+}
+
+.highlight-block {
+  position: relative;
+  display: inline-block;
+  background-color: var(--gray-block);
+  padding: 0 0.08em;
+  margin-left: 0.02em;
+  line-height: 0.85;
+  animation: glitchPulse 3s ease-in-out 2s infinite;
+}
+
+/* --- Teks Kiri Bawah: Students at Telkom University --- */
+.hero-position {
+  position: absolute;
+  bottom: 3rem;
+  left: 4rem;
+  z-index: 5;
+  opacity: 0;
+  animation: fadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 1.1s forwards;
+}
+
+.hero-position p {
+  font-family: "Times New Roman", Times, Georgia, serif;
+  font-size: clamp(1.1rem, 1.6vw, 1.7rem);
+  line-height: 1.15;
+  color: var(--text);
+}
+
+/* --- Teks Kanan Tengah: Welcome to My Website --- */
+.hero-welcome {
+  position: absolute;
+  top: 42%;
+  right: 4rem;
+  z-index: 5;
+  text-align: right;
+  opacity: 0;
+  animation: slideFromRight 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.9s forwards;
+}
+
+.hero-welcome p {
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+/* --- Teks Kanan Bawah: Deskripsi --- */
+.hero-description {
+  position: absolute;
+  bottom: 3rem;
+  right: 4rem;
+  z-index: 5;
+  text-align: right;
+  max-width: 340px;
+  opacity: 0;
+  animation: slideFromRight 0.9s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards;
+}
+
+.hero-description p {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.7;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+/* =========================================
+           RESPONSIVE — TABLET (≤ 1200px)
+           ========================================= */
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 1.5rem 2.5rem;
+  }
+
+  .navbar-menu a {
+    padding: 0.6rem 1.3rem;
+    font-size: 0.7rem;
+    letter-spacing: 1.2px;
+  }
+
+  .hero-greeting,
+  .hero-name,
+  .hero-position {
+    left: 2.5rem;
+  }
+
+  .hero-welcome,
+  .hero-description {
+    right: 2.5rem;
+  }
+
+  .hero-description {
+    max-width: 280px;
+  }
+
+  .hero-description p {
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================================
+           RESPONSIVE — SMALL TABLET (≤ 992px)
+           ========================================= */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .navbar-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 0.3rem;
+  }
+
+  .navbar-menu a {
+    padding: 0.55rem 1rem;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+  }
+
+  .navbar-menu a.navbar-cv {
+    margin-left: 0.25rem;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.5rem 4rem;
+    min-height: auto;
+    gap: 2rem;
+  }
+
+  .hero-photo {
+    position: relative;
+    height: auto;
+    max-height: 60vh;
+    width: 100%;
+    max-width: 500px;
+    left: auto;
+    transform: none;
+    order: -1;
+    padding: 0.8rem 0.8rem 0 0.8rem;
+    border-width: 2px;
+    box-shadow:
+      0 0 40px rgba(255, 255, 255, 0.08),
+      -6px 6px 0 0 var(--accent);
+    animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+  }
+
+  .hero-photo img {
+    width: 100%;
+    height: auto;
+    max-height: 55vh;
+    object-fit: contain;
+  }
+
+  .hero-greeting,
+  .hero-name,
+  .hero-position,
+  .hero-welcome,
+  .hero-description {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    text-align: left;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .hero-greeting h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .hero-name h1 {
+    font-size: clamp(2.8rem, 11vw, 4.5rem);
+    letter-spacing: -2px;
+  }
+
+  .hero-position {
+    padding-top: 1rem;
+    border-top: 1px dashed rgba(255, 255, 255, 0.15);
+  }
+
+  .hero-position p {
+    font-size: 1.3rem;
+  }
+
+  .hero-welcome p {
+    font-size: 0.8rem;
+  }
+
+  .hero-description p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+/* =========================================
+           RESPONSIVE — MOBILE (≤ 600px)
+           ========================================= */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 1.2rem 1rem;
+    gap: 0.8rem;
+  }
+
+  .navbar-logo {
+    font-size: 1rem;
+    letter-spacing: 0.8px;
+  }
+
+  .navbar-menu {
+    border-width: 1px;
+    padding: 0.25rem;
+    gap: 0.15rem;
+  }
+
+  .navbar-menu a {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.8px;
+  }
+
+  .navbar-menu a.navbar-cv {
+    margin-left: 0.2rem;
+  }
+
+  .hero {
+    padding: 1.5rem 1rem 3rem;
+    gap: 1.5rem;
+  }
+
+  .hero-photo {
+    max-height: 50vh;
+    padding: 0.6rem 0.6rem 0 0.6rem;
+    box-shadow:
+      0 0 30px rgba(255, 255, 255, 0.08),
+      -5px 5px 0 0 var(--accent);
+  }
+
+  .hero-photo img {
+    max-height: 45vh;
+  }
+
+  .hero-greeting h1 {
+    font-size: 2rem;
+    letter-spacing: -1px;
+  }
+
+  .hero-name h1 {
+    font-size: 2.8rem;
+    letter-spacing: -1.5px;
+  }
+
+  .hero-position {
+    padding-top: 0.8rem;
+  }
+
+  .hero-position p {
+    font-size: 1.15rem;
+  }
+
+  .hero-welcome p {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+  }
+
+  .hero-description p {
+    font-size: 0.8rem;
+    letter-spacing: 0.3px;
+  }
+}
+
+/* =========================================
+           RESPONSIVE — EXTRA SMALL (≤ 400px)
+           ========================================= */
+@media (max-width: 400px) {
+  .navbar-menu a {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.55rem;
+    letter-spacing: 0.5px;
+  }
+
+  .hero-photo {
+    max-height: 45vh;
+  }
+
+  .hero-photo img {
+    max-height: 40vh;
+  }
+
+  .hero-greeting h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-name h1 {
+    font-size: 2.3rem;
+    letter-spacing: -1px;
+  }
+
+  .hero-position p {
+    font-size: 1rem;
+  }
+
+  .hero-description p {
+    font-size: 0.75rem;
+  }
+}
+
+/* =========================================
+           RESPONSIVE — LANDSCAPE MOBILE
+           ========================================= */
+@media (max-width: 992px) and (orientation: landscape) {
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: center;
+    min-height: auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .hero-photo {
+    order: 0;
+    grid-column: 2 / 3;
+    grid-row: 1 / 6;
+    max-height: 80vh;
+    max-width: 100%;
+  }
+
+  .hero-photo img {
+    max-height: 75vh;
+  }
+
+  .hero-greeting,
+  .hero-name,
+  .hero-position,
+  .hero-welcome,
+  .hero-description {
+    grid-column: 1 / 2;
+    max-width: 100%;
+  }
+}
+
+/* =========================================
+           ACCESSIBILITY: Reduksi gerak
+           ========================================= */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

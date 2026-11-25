@@ -36,7 +36,7 @@
         <a href="./projects.html" class="active">PROJECTS</a>
         <a href="./contact.html">CONTACT</a>
 
-        <a href="/assets/cv/Rendi-Damara-CV.pdf" download class="navbar-cv">
+        <a href="/assets/cv/CV.pdf" download class="navbar-cv">
           <span class="cv-icon">↓</span>
           <span>Download CV</span>
         </a>
@@ -65,9 +65,11 @@
         <div class="filter-bar">
           <span class="filter-label">Filter:</span>
           <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="web">Web/Backend</button>
           <button class="filter-btn" data-filter="iot">IoT</button>
-          <button class="filter-btn" data-filter="embedded">Embedded</button>
+          <button class="filter-btn" data-filter="embedded">
+            Autodesk Fusion
+          </button>
         </div>
 
         <!-- Projects Grid -->
@@ -79,88 +81,113 @@
               <span class="category">Web · IoT</span>
             </div>
             <div class="project-content">
-              <h2>Smart Attendance System</h2>
+              <h2>Sistem pemantauan Temperature, Suhu, dan kelembapan</h2>
               <p>
-                Sistem absensi berbasis RFID yang terintegrasi dengan dashboard
-                web untuk monitoring kehadiran secara real-time. Berperan
-                sebagai Hardware Integrator dan Backend Developer.
+                Memantau Temperature, Suhu, dan kelembapan dengan ESP32, dan
+                sensor BME280.
               </p>
               <div class="tech-stack">
                 <span>Golang</span>
-                <span>React</span>
-                <span>MySQL</span>
-                <span>Raspberry Pi</span>
+                <span>VanilaJS</span>
+                <span>PostgreSQL</span>
+                <span>ESP32</span>
                 <span>MQTT</span>
+                <span>C++</span>
+                <span>SENSOR BME280</span>
               </div>
               <div class="project-links">
-                <a href="#" target="_blank" rel="noreferrer">Live Demo ↗</a>
-                <a href="#" target="_blank" rel="noreferrer">GitHub ↗</a>
+                <a
+                  href="https://bme280-demo.fly.dev/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Live Demo ↗</a
+                >
+                <a
+                  href="https://github.com/Reddra335/bme280/tree/master"
+                  target="_blank"
+                  rel="noreferrer"
+                  >GitHub ↗</a
+                >
               </div>
             </div>
           </div>
 
-          <!-- 02. E-Commerce Dashboard -->
+          <!-- 02. RESTFullAPI -->
           <div class="project-card" data-category="web">
             <div class="project-meta">
               <span class="number">[ 02 ]</span>
               <span class="category">Web</span>
             </div>
             <div class="project-content">
-              <h2>E-Commerce Dashboard</h2>
+              <h2>golang RESTful API</h2>
               <p>
                 Dashboard admin untuk manajemen produk, pesanan, dan laporan
                 penjualan dengan antarmuka yang bersih dan responsif.
               </p>
               <div class="tech-stack">
-                <span>React</span>
-                <span>JavaScript</span>
+                <span>GO Validator</span>
+                <span>Go Google Wire</span>
+                <span>Golang</span>
                 <span>MySQL</span>
               </div>
               <div class="project-links">
-                <a href="#" target="_blank" rel="noreferrer">Live Demo ↗</a>
+                <a
+                  href="https://github.com/Reddra335/golang-restful-api"
+                  target="_blank"
+                  rel="noreferrer"
+                  >GitHub ↗</a
+                >
               </div>
             </div>
           </div>
 
-          <!-- 03. Automated Lighting Control -->
-          <div class="project-card" data-category="embedded">
+          <!-- 03. GOLANG RESTFULL API WITH GOMAIL, DAN REDIS-->
+          <div class="project-card" data-category="web">
             <div class="project-meta">
               <span class="number">[ 03 ]</span>
-              <span class="category">Embedded</span>
+              <span class="category">BACKEND</span>
             </div>
             <div class="project-content">
-              <h2>Automated Lighting Control</h2>
+              <h2>
+                Go RESTful API GOMAIL, REDIS, HASH ARGON2ID, POSTGRESQL, DAN
+                FIBER V3
+              </h2>
               <p>
-                Sistem kendali lampu otomatis berbasis sensor gerak dan
-                intensitas cahaya menggunakan mikrokontroler.
+                GO RESTful API sudah bisa mengirimkan ke email seseorang dengan
+                library gomail, penyimpanan sementara dengan REDIS, Hashing
+                keamanan passwornd dengan Argond2id, tersambung ke POSTGRESQL,
+                dan menggunakan framework Fiber V3
               </p>
               <div class="tech-stack">
-                <span>C++</span>
-                <span>Arduino</span>
-                <span>Sensor PIR</span>
+                <span>GOLANG</span>
+                <span>FIBER V3</span>
+                <span>ARGON2ID</span>
+                <span>GOMAIL</span>
+                <span>POSTGRESQL</span>
+                <span>REDIS</span>
               </div>
               <div class="project-links">
-                <a href="#" target="_blank" rel="noreferrer">GitHub ↗</a>
+                <a
+                  href="https://github.com/Reddra335/golang-restful-api"
+                  target="_blank"
+                  rel="noreferrer"
+                  >GitHub ↗</a
+                >
               </div>
             </div>
           </div>
 
           <!-- 04. Weather Monitoring Station -->
-          <div class="project-card" data-category="iot">
+          <div class="project-card" data-category="embedded">
             <div class="project-meta">
               <span class="number">[ 04 ]</span>
-              <span class="category">IoT</span>
+              <span class="category">Autodesk</span>
             </div>
             <div class="project-content">
-              <h2>Weather Monitoring Station</h2>
-              <p>
-                Stasiun pemantau cuaca mini yang mengirim data suhu, kelembapan,
-                dan tekanan udara ke cloud secara berkala.
-              </p>
+              <h2>Projek Pembuatan Piston</h2>
+              <p>Membuat sebuah prototype piston dengan Autodesk Fusion</p>
               <div class="tech-stack">
-                <span>ESP32</span>
-                <span>MQTT</span>
-                <span>Golang</span>
+                <span>Autodesk Fusion</span>
               </div>
               <div class="project-links">
                 <a href="#" target="_blank" rel="noreferrer">Live Demo ↗</a>
@@ -176,42 +203,59 @@
               <span class="category">Web</span>
             </div>
             <div class="project-content">
-              <h2>Personal Portfolio Website</h2>
-              <p>
-                Website portofolio pribadi dengan gaya brutalist modern,
-                dibangun dari nol tanpa framework CSS.
-              </p>
+              <h2>Personal Portfolio Website 2</h2>
+              <p>Website portofolio pribadi dengan ReactJS dan Tailwind CSS</p>
               <div class="tech-stack">
                 <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
+                <span>Tailwind CSS</span>
+                <span>ReactJS</span>
               </div>
               <div class="project-links">
-                <a href="#" target="_blank" rel="noreferrer">Live Demo ↗</a>
-                <a href="#" target="_blank" rel="noreferrer">GitHub ↗</a>
+                <a
+                  href="https://portfolio-react-two-indol-14.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Live Demo ↗</a
+                >
+                <a
+                  href="https://github.com/Reddra335/portfolio-react"
+                  target="_blank"
+                  rel="noreferrer"
+                  >GitHub ↗</a
+                >
               </div>
             </div>
           </div>
 
           <!-- 06. Smart Door Lock -->
-          <div class="project-card" data-category="embedded iot">
+          <div class="project-card" data-category="web">
             <div class="project-meta">
               <span class="number">[ 06 ]</span>
-              <span class="category">Embedded · IoT</span>
+              <span class="category">WEB</span>
             </div>
             <div class="project-content">
-              <h2>Smart Door Lock</h2>
+              <h2>Profil Voltera25</h2>
               <p>
-                Kunci pintu pintar berbasis RFID dan keypad yang terhubung ke
-                aplikasi mobile untuk kontrol akses jarak jauh.
+                Voltera25 adalah angkatan prodi S1 Teknik Elektro angkatan 2025
               </p>
               <div class="tech-stack">
-                <span>Arduino</span>
-                <span>RFID</span>
-                <span>Node.js</span>
+                <span>JS</span>
+                <span>HTML</span>
+                <span>CSS</span>
               </div>
               <div class="project-links">
-                <a href="#" target="_blank" rel="noreferrer">GitHub ↗</a>
+                <a
+                  href="https://voltera25-v3.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Live Demo ↗</a
+                >
+                <a
+                  href="https://github.com/Reddra335/voltera25"
+                  target="_blank"
+                  rel="noreferrer"
+                  >GitHub ↗</a
+                >
               </div>
             </div>
           </div>

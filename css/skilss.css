@@ -1,6 +1,6 @@
 /* =========================================
-           RESET & BASE
-           ========================================= */
+   RESET & BASE
+   ========================================= */
 * {
   margin: 0;
   padding: 0;
@@ -32,8 +32,8 @@ body {
 }
 
 /* =========================================
-           KEYFRAMES ANIMATIONS
-           ========================================= */
+   KEYFRAMES ANIMATIONS
+   ========================================= */
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -88,8 +88,8 @@ body {
 }
 
 /* =========================================
-           NAVBAR COMPONENT
-           ========================================= */
+   NAVBAR COMPONENT
+   ========================================= */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -179,8 +179,8 @@ body {
 /* ============ END NAVBAR COMPONENT ============ */
 
 /* =========================================
-           SKILLS CONTAINER
-           ========================================= */
+   SKILLS CONTAINER
+   ========================================= */
 .skills-container {
   flex: 1;
   width: 100%;
@@ -195,8 +195,8 @@ body {
 }
 
 /* =========================================
-           HEADER
-           ========================================= */
+   HEADER
+   ========================================= */
 .section-header {
   display: flex;
   justify-content: space-between;
@@ -225,8 +225,8 @@ body {
 }
 
 /* =========================================
-           HERO TITLE
-           ========================================= */
+   HERO TITLE
+   ========================================= */
 .hero-title {
   padding: 3rem 2rem;
   border-bottom: 2px solid var(--text);
@@ -259,8 +259,8 @@ body {
 }
 
 /* =========================================
-           SKILLS GRID
-           ========================================= */
+   SKILLS GRID
+   ========================================= */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -273,7 +273,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
 
@@ -361,25 +360,9 @@ body {
   max-width: 90%;
 }
 
-/* Hover Effect (Invert) */
-.skill-card:hover {
-  background-color: var(--text);
-  color: var(--bg);
-}
-
-.skill-card:hover .skill-meta .number,
-.skill-card:hover .skill-meta .category {
-  color: var(--accent);
-  border-color: var(--accent);
-}
-
-.skill-card:hover p {
-  color: #333;
-}
-
 /* =========================================
-           FOOTER
-           ========================================= */
+   FOOTER
+   ========================================= */
 .footer {
   padding: 2rem;
   text-align: center;
@@ -399,8 +382,8 @@ body {
 }
 
 /* =========================================
-           RESPONSIVE — TABLET (≤ 1200px)
-           ========================================= */
+   RESPONSIVE — TABLET (≤ 1200px)
+   ========================================= */
 @media (max-width: 1200px) {
   .navbar {
     padding: 1.5rem 2.5rem;
@@ -437,8 +420,8 @@ body {
 }
 
 /* =========================================
-           RESPONSIVE — SMALL TABLET (≤ 992px)
-           ========================================= */
+   RESPONSIVE — SMALL TABLET (≤ 992px)
+   ========================================= */
 @media (max-width: 992px) {
   .navbar {
     padding: 1.5rem;
@@ -537,8 +520,8 @@ body {
 }
 
 /* =========================================
-           RESPONSIVE — MOBILE (≤ 600px)
-           ========================================= */
+   RESPONSIVE — MOBILE (≤ 600px)
+   ========================================= */
 @media (max-width: 600px) {
   .navbar {
     padding: 1.2rem 1rem;
@@ -629,8 +612,8 @@ body {
 }
 
 /* =========================================
-           RESPONSIVE — EXTRA SMALL (≤ 400px)
-           ========================================= */
+   RESPONSIVE — EXTRA SMALL (≤ 400px)
+   ========================================= */
 @media (max-width: 400px) {
   .navbar-menu a {
     padding: 0.35rem 0.6rem;
@@ -681,8 +664,8 @@ body {
 }
 
 /* =========================================
-           RESPONSIVE — LANDSCAPE MOBILE
-           ========================================= */
+   RESPONSIVE — LANDSCAPE MOBILE
+   ========================================= */
 @media (max-width: 992px) and (orientation: landscape) {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -706,8 +689,8 @@ body {
 }
 
 /* =========================================
-           ACCESSIBILITY: Reduksi gerak
-           ========================================= */
+   ACCESSIBILITY: Reduksi gerak
+   ========================================= */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
